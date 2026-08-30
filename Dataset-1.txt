@@ -1,0 +1,8 @@
+!pip install roboflow
+
+from roboflow import Roboflow
+rf = Roboflow(api_key="AYMytOLIb9S49lYAgMPj")
+project = rf.workspace("dataset-robot-semprot").project("tugas-akhir-3-hpxrl")
+version = project.version(2)
+dataset = version.download("yolov8")
+                
